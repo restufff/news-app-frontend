@@ -169,12 +169,8 @@ class DetailsScreen extends StatelessWidget {
       body: ListView(
         padding: EdgeInsets.all(20),
         children: [
-          Text(
-            articlesDetails.title,
-            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 23),
-          ),
           Padding(
-            padding: const EdgeInsets.all(5),
+            padding: const EdgeInsets.all(6),
             child: Container(
               height: 200,
               decoration: BoxDecoration(
@@ -183,8 +179,14 @@ class DetailsScreen extends StatelessWidget {
                       fit: BoxFit.cover),
                   boxShadow: [BoxShadow(color: Colors.black, blurRadius: 3)],
                   border: Border.all(color: Colors.black, width: 1)),
+              width: 500,
             ),
           ),
+          Text(
+            articlesDetails.title,
+            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 23),
+          ),
+          Text(articlesDetails.publishedAt.toString()),
           Text(articlesDetails.content)
         ],
       ),
